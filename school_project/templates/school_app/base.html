@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css'%}">
+  </head>
+      <body>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="{% url 'school:list' %}">School</a>
+
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="">Admin</a>
+          </nav>
+          {% block body_block %}
+          {% endblock %}
+      </body>
+    </html>
